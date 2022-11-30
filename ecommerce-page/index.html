@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/mediaQueries.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="title-js">
+        <p>a</p>
+      </div>
+      <header>
+        <div class="header__left">
+          <div class="navButton"></div>
+          <img src="./images/logo.svg" alt="Logo Sneakers">
+          <ul class="nav">
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+          <div class="nav-overlay"></div>
+        </div>
+        <div class="header__right">
+          <div class="cart" title-js="Check your cart">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill-rule="nonzero" />
+            </svg>
+            <div class="cart__articles"><span id="articles">3</span></div>
+          </div>
+          <div class="cart-dropdown">
+            <h2>Cart</h2>
+            <div class="line__cart"></div>
+            <div class="cart__content">
+              <p class="cart__empty cart__content--appear">Your cart is empty.</p>
+              <div class="cart__item">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="Image of product to buy">
+                <div class="cart__info">
+                  <h2>Fall Limited Edition Sneakers</h2>
+                  <div class="info__price">
+                    <p>$125.00 x 3 <span class="bold">$375.00</span></p>
+                  </div>
+                </div>
+                <div class="cart__delete">
+                  <img src="./images/icon-delete.svg" alt="Icon delete">
+                </div>
+              </div>
+
+              <button class="checkout">Checkout</button>
+            </div>
+          </div>
+          <div class="avatar" title-js="View your profile" title-js-avatar>
+            <img src="./images/image-avatar.png" alt="Avatar image">
+          </div>
+        </div>
+      </header>
+
+      <main>
+
+        <div id="main__image" class="main__image">
+          <div class="image__featuring">
+            <img src="./images/image-product-1.jpg" alt="Featuring image">
+          </div>
+          <div class="image__thumbnail">
+            <span class="image__thumbnail--selected">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail image product 1">
+            </span>
+            <span>
+              <img src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail image product 2">
+            </span>
+            <span>
+              <img src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail image product 3">
+            </span>
+            <span>
+              <img src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail image product 4">
+            </span>
+          </div>
+
+          <div class="carousel">
+            <div class="carousel__featuring">
+              <div class="carousel__close" title-js="Close" title-js-close>
+                <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                    fill-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="featuring__prev controlCarousel" title-js="Previous Image" onclick="animateCarousel('prev')">
+                <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+                </svg>
+              </div>
+              <img src="./images/image-product-1.jpg" alt="Featuring image">
+              <div class="featuring__next controlCarousel" title-js="Next image" onclick="animateCarousel('next')">
+                <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="carousel__thumbnail">
+              <span class="carousel__thumbnail--selected">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail image product 1">
+              </span>
+              <span>
+                <img src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail image product 2">
+              </span>
+              <span>
+                <img src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail image product 3">
+              </span>
+              <span>
+                <img src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail image product 4">
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__info">
+          <h2>Sneaker Company</h2>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="price">
+            <div class="inline__price">
+              <h2>$125.00</h2>
+              <span>50%</span>
+            </div>
+            <h3>$250.00</h3>
+          </div>
+          <div class="purchase">
+            <div class="units">
+              <div class="units__minus" onclick="changeUnits('subtract')">
+                <img src="./images/icon-minus.svg" alt="Icon minus">
+              </div>
+              <p class="units__current">0</p>
+              <div class="units__plus" onclick="changeUnits('add')">
+                <img src="./images/icon-plus.svg" alt="Icon plus">
+              </div>
+            </div>
+            <button type="button" class="addToCart">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill-rule="nonzero" />
+              </svg>
+              <p>Add to cart</p>
+            </button>
+          </div>
+        </div>
+      </main>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/ian2223" target="_blank">Tomás Iannello</a>.
+      </div>
+    </div>
+  </div>
+  <script src="./js/app.js"></script>
+  <script src="./js/carousel.js"></script>
+</body>
+
+</html>

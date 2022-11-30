@@ -1,0 +1,101 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    background: var(--white);
+    font-family: 'Kumbh Sans';
+    overflow-x: hidden;
+}
+
+:root {
+    --orange: #ff7d1a;
+    --poleOrange: #ffede0;
+    --veryDarkBlue: #1d2025;
+    --darkGrayishBlue: #68707d;
+    --grayishBlue: #b6bcc8;
+    --white: #fff;
+    --black: #000;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.content {
+    width: calc(100% - 16%);
+    padding: 0 8% 30px 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-js {
+    position: absolute;
+    top: 55px;
+    width: max-content;
+    max-width: 150px;
+    min-width: 50px;
+    max-height: 50px;
+    background: #1f1f1f;
+    color: var(--white);
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 5px 10px;
+    pointer-events: none;
+    opacity: 0;
+    transition: .2s ease;
+}
+
+.title-js p {
+    margin: 0;
+    z-index: 30;
+    text-align: center;
+}
+
+.title-js::before {
+    content: "";
+    width: 40px;
+    height: 20px;
+    background: #1f1f1f;
+    position: absolute;
+    top: -7px;
+    z-index: 20;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.title-js--show {
+    opacity: 1 !important;
+}
+
+[title-js-close] .title-js {
+    left: -10px;
+}
+
+[title-js-avatar] .title-js {
+    left: 25px;
+    top: 90px;
+}
+
+
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    width: calc(100% - 50px);
+    line-height: 20px;
+    padding: 0 25px;
+    margin: 70px auto 0 auto;
+    color: rgba(37, 37, 37, 0.781);
+    font-weight: 500;
+    font-size: .75rem;
+}
+
+.attribution a {
+    color: #d87a33;
+}
+
+.attribution a:hover {
+    text-decoration: none;
+}
